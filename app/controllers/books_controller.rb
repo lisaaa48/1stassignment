@@ -35,7 +35,8 @@ class BooksController < ApplicationController
   	  flash[:success] = 'Book was successfully created.'
   	  redirect_to book_path(@book)
 	else
-  	  render "index"
+      @books = Book.all.order(created_at: :asc)
+  	  render "books/index"
   	end
   end
 

@@ -16,5 +16,5 @@
 	</p>
 </div>
 
-<%= link_to "Edit", edit_book_path(@book.id) %>
-<%= link_to "Back", books_path %>
+<%= link_to "Edit", edit_book_path(@book), class: "edit_#{@book.id}" %>
+<%= link_to "Back", books_path, class: "back" %>
